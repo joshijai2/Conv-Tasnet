@@ -32,10 +32,9 @@ class TasNetDataLoader():
         logging.info("Loading data from {}".format(self.tfr))
         with tf.name_scope("input"):
             dataset = tf.data.TFRecordDataset(self.tfr).map(self._decode)
-            print(dataset)
             if self.mode == "train":
                 dataset = dataset.shuffle(2000 + 3 * self.batch_size)
-            dataset = dataset.batch(self.batch_size,drop_remainder=True)
+            dataset = dataset.batch(self.batch_size, drop_remainder=True)
             dataset = dataset.prefetch(self.batch_size * 5)
             self.iterator = dataset.make_initializable_iterator()
             return self.iterator.get_next()
@@ -46,14 +45,22 @@ class TasNetDataLoader():
             mix_wav_dir = os.path.join(self.wav_dir, "mix")
             s1_wav_dir = os.path.join(self.wav_dir, "s1")
             s2_wav_dir = os.path.join(self.wav_dir, "s2")
-            filenames = os.listdir(mix_wav_dir)
-            for filename in tqdm(filenames):
+            mixfilenames = os.listdir(mix_wav_dir)
+            s1filenames = os.listdir(s1_wav_dir)
+            s2filenames = os.listdir(s2_wav_dir)
+            # map '_' to s1 filenames to sort the files correctly
+            s1filenames = list(map(lambda s: "_".join(s.split(".")),s1filenames))
+            
+            total_files = len(mixfilenames)
+            print(total_files)
+            for index in tqdm(range(total_files)):
+                
                 mix, _ = librosa.load(
-                    os.path.join(mix_wav_dir, filename), self.sample_rate)
+                    os.path.join(mix_wav_dir, mixfilenames[index]), self.sample_rate)
                 s1, _ = librosa.load(
-                    os.path.join(s1_wav_dir, filename), self.sample_rate)
+                    os.path.join(s1_wav_dir, ".".join(s1filenames[index].split("_"))), self.sample_rate)
                 s2, _ = librosa.load(
-                    os.path.join(s2_wav_dir, filename), self.sample_rate)
+                    os.path.join(s2_wav_dir, s2filenames[index]), self.sample_rate)
 
                 # def padding(inputs):
                 #     return np.pad(
