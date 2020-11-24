@@ -22,7 +22,7 @@ class TasNetDataLoader():
         self.batch_size = batch_size
         self.sample_rate = sample_rate
 
-        if not os.path.isfile(self.tfr):
+        if not os.path.isfile(self.tfr) or os.stat(self.tfr).st_size == 0:
             self._encode()
 
     def _float_list_feature(self, value):
@@ -47,7 +47,6 @@ class TasNetDataLoader():
             s1_wav_dir = os.path.join(self.wav_dir, "s1")
             s2_wav_dir = os.path.join(self.wav_dir, "s2")
             filenames = os.listdir(mix_wav_dir)
-            print(filenames)
             for filename in tqdm(filenames):
                 mix, _ = librosa.load(
                     os.path.join(mix_wav_dir, filename), self.sample_rate)

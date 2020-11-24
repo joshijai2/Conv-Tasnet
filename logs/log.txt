@@ -9,3 +9,11 @@ Use tf.cast instead.
 # of trainable parameters: 8769024
 Loading model with fresh parameters
 -------------------- epoch 1 -------------------------
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\train.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\train.tfr
