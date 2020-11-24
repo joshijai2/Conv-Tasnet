@@ -32,6 +32,7 @@ class TasNetDataLoader():
         logging.info("Loading data from {}".format(self.tfr))
         with tf.name_scope("input"):
             dataset = tf.data.TFRecordDataset(self.tfr).map(self._decode)
+            print(dataset)
             if self.mode == "train":
                 dataset = dataset.shuffle(2000 + 3 * self.batch_size)
             dataset = dataset.batch(self.batch_size,drop_remainder=True)
@@ -46,6 +47,7 @@ class TasNetDataLoader():
             s1_wav_dir = os.path.join(self.wav_dir, "s1")
             s2_wav_dir = os.path.join(self.wav_dir, "s2")
             filenames = os.listdir(mix_wav_dir)
+            print(filenames)
             for filename in tqdm(filenames):
                 mix, _ = librosa.load(
                     os.path.join(mix_wav_dir, filename), self.sample_rate)
