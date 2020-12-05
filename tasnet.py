@@ -5,7 +5,16 @@ from itertools import permutations
 import numpy as np
 
 ''' change the model, instead of recieving dataloader as input, use one
-    placeholer data_input. 
+    placeholer data_input.
+
+     Args:
+        N (integer): Number of filters in autocoder
+        L (integer): Length of the filters (in samples)
+        B (integer): Number of the channels in bottleneck 1x1-conv block
+        H (integer): Number of channels in convolutional blocks
+        P (integer): Kernel size in convolutional blocks
+        X (integer): Number of convolutional blocks in each repeat
+        R (integer): Number of repeats
 '''
 class TasNet:
     def __init__(self, mode, data_input, layers, n_speaker, N, L, B, H, P, X,
