@@ -1,0 +1,21 @@
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\train.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\train.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\train.tfr
+Writing .\data\valid.tfr
+Loading data from .\data\train.tfr
+Loading data from .\data\valid.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+# of trainable parameters: 8769024
+Loading model with fresh parameters
+-------------------- epoch 1 -------------------------
