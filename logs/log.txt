@@ -19,3 +19,48 @@ Use tf.cast instead.
 # of trainable parameters: 8769024
 Loading model with fresh parameters
 -------------------- epoch 1 -------------------------
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\train.tfr
+Writing .\data\valid.tfr
+Loading data from .\data\train.tfr
+Loading data from .\data\valid.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+# of trainable parameters: 172224
+Loading model with fresh parameters
+-------------------- epoch 1 -------------------------
+step = 600 , train SDR = 3.462451 , lr = 0.001000
+validation SDR = 6.109060
+-------------------- epoch 2 -------------------------
+step = 1200 , train SDR = 6.717205 , lr = 0.001000
+validation SDR = 7.612693
+-------------------- epoch 3 -------------------------
+step = 1800 , train SDR = 7.764355 , lr = 0.001000
+validation SDR = 8.245361
+-------------------- epoch 4 -------------------------
+step = 2400 , train SDR = 8.286766 , lr = 0.001000
+validation SDR = 8.757472
+-------------------- epoch 5 -------------------------
+step = 3000 , train SDR = 8.691136 , lr = 0.001000
+validation SDR = 9.094834
+-------------------- epoch 6 -------------------------
+step = 3600 , train SDR = 8.965910 , lr = 0.001000
+validation SDR = 9.437203
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\training\saver.py:966: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+-------------------- epoch 7 -------------------------
+step = 4200 , train SDR = 9.204189 , lr = 0.001000
+validation SDR = 9.570412
+-------------------- epoch 8 -------------------------
+step = 4800 , train SDR = 9.434926 , lr = 0.001000
+validation SDR = 9.618086
+-------------------- epoch 9 -------------------------
+step = 5400 , train SDR = 9.613786 , lr = 0.001000
+validation SDR = 9.824209
+-------------------- epoch 10 -------------------------
+step = 6000 , train SDR = 9.782170 , lr = 0.001000
+validation SDR = 9.926582

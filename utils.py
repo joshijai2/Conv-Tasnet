@@ -38,7 +38,7 @@ def read_log(log_file):
 def setup():
     """
      Args:
-        N (integer): Number of filters in autocoder
+        N (integer): Number of filters in autoencoder
         L (integer): Length of the filters (in samples)
         B (integer): Number of the channels in bottleneck 1x1-conv block
         H (integer): Number of channels in convolutional blocks
@@ -51,17 +51,17 @@ def setup():
     parser.add_argument('-dd', '--data_dir', type=str, default='.\data')
     parser.add_argument('-lr', '--learning_rate', type=float, default=1e-3)
     parser.add_argument('-ld', '--log_dir', type=str, default='.\logs')
-    parser.add_argument('-me', '--max_epoch', type=int, default=100)
+    parser.add_argument('-me', '--max_epoch', type=int, default=100//10)
     parser.add_argument('-mo', '--mode', type=str, default='train')
-    parser.add_argument('-sr', '--sample_rate', type=int, default=16000)
+    parser.add_argument('-sr', '--sample_rate', type=int, default=8000)
 
-    parser.add_argument('-N', '-N', type=int, default=256)
+    parser.add_argument('-N', '-N', type=int, default=256//2)
     parser.add_argument('-L', '-L', type=int, default=20)
-    parser.add_argument('-B', '-B', type=int, default=256)
-    parser.add_argument('-H', '-H', type=int, default=512)
+    parser.add_argument('-B', '-B', type=int, default=256//4)
+    parser.add_argument('-H', '-H', type=int, default=512//4)
     parser.add_argument('-P', '-P', type=int, default=3)
-    parser.add_argument('-X', '-X', type=int, default=8)
-    parser.add_argument('-R', '-R', type=int, default=4)
+    parser.add_argument('-X', '-X', type=int, default=8//2)
+    parser.add_argument('-R', '-R', type=int, default=4//2)
 
     args = parser.parse_args()
 

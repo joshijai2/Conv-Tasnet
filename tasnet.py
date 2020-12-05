@@ -8,7 +8,7 @@ import numpy as np
     placeholer data_input.
 
      Args:
-        N (integer): Number of filters in autocoder
+        N (integer): Number of filters in autoencoder
         L (integer): Length of the filters (in samples)
         B (integer): Number of the channels in bottleneck 1x1-conv block
         H (integer): Number of channels in convolutional blocks
