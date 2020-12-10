@@ -56,7 +56,7 @@ class TasNet:
         input_audio = audios[:, 0, :]
 
         self.single_audios = single_audios = tf.unstack(
-            audios[:, 1:, :], axis=1)
+            audios[:, 1:, :], axis=1) 
 
         with tf.variable_scope("encoder"):
             # encoded_input: [batch_size, some len, N]

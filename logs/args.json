@@ -1,0 +1,19 @@
+{
+    "batch_size": 2,
+    "data_dir": ".\\data",
+    "learning_rate": 0.001,
+    "log_dir": ".\\logs",
+    "max_epoch": 10,
+    "mode": "train",
+    "sample_rate": 8000,
+    "N": 128,
+    "L": 20,
+    "B": 64,
+    "H": 128,
+    "P": 3,
+    "X": 4,
+    "R": 2,
+    "log_file": ".\\logs\\log.txt",
+    "arg_file": ".\\logs\\args.json",
+    "checkpoint_path": ".\\logs\\model.ckpt"
+}

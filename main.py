@@ -2,6 +2,7 @@
 import os
 import tensorflow as tf
 import librosa
+import soundfile as sf
 import numpy as np
 import logging
 import shutil
@@ -282,11 +283,10 @@ if __name__ == '__main__':
                     ]
 
                     def write(inputs, filename):
-                        librosa.output.write_wav(
+                        sf.write(
                             now_dir + filename,
                             inputs,
-                            args.sample_rate,
-                            norm=True)
+                            args.sample_rate)
 
                     write(outputs[0], 's1.wav')
                     write(outputs[1], 's2.wav')

@@ -2,23 +2,31 @@ From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\p
 Instructions for updating:
 Colocations handled automatically by placer.
 Writing .\data\train.tfr
-From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Colocations handled automatically by placer.
-Writing .\data\train.tfr
-From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Colocations handled automatically by placer.
-Writing .\data\train.tfr
 Writing .\data\valid.tfr
 Loading data from .\data\train.tfr
 Loading data from .\data\valid.tfr
 From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use tf.cast instead.
-# of trainable parameters: 8769024
+# of trainable parameters: 172224
 Loading model with fresh parameters
 -------------------- epoch 1 -------------------------
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\train.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\train.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\train.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\train.tfr
 From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Colocations handled automatically by placer.
@@ -32,35 +40,131 @@ Use tf.cast instead.
 # of trainable parameters: 172224
 Loading model with fresh parameters
 -------------------- epoch 1 -------------------------
-step = 600 , train SDR = 3.462451 , lr = 0.001000
-validation SDR = 6.109060
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\train.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\train.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\train.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\train.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\train.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\valid.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\valid.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\valid.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\valid.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\valid.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\train.tfr
+Writing .\data\valid.tfr
+Loading data from .\data\train.tfr
+Loading data from .\data\valid.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+# of trainable parameters: 172224
+Loading model with fresh parameters
+-------------------- epoch 1 -------------------------
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Loading data from .\data\train.tfr
+Loading data from .\data\valid.tfr
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+# of trainable parameters: 172224
+Loading model with fresh parameters
+-------------------- epoch 1 -------------------------
+step = 540 , train SDR = 2.367038 , lr = 0.001000
+validation SDR = 3.920752
 -------------------- epoch 2 -------------------------
-step = 1200 , train SDR = 6.717205 , lr = 0.001000
-validation SDR = 7.612693
+step = 1080 , train SDR = 5.033203 , lr = 0.001000
+validation SDR = 6.572393
 -------------------- epoch 3 -------------------------
-step = 1800 , train SDR = 7.764355 , lr = 0.001000
-validation SDR = 8.245361
+step = 1620 , train SDR = 7.308892 , lr = 0.001000
+validation SDR = 7.969683
 -------------------- epoch 4 -------------------------
-step = 2400 , train SDR = 8.286766 , lr = 0.001000
-validation SDR = 8.757472
+step = 2160 , train SDR = 8.096876 , lr = 0.001000
+validation SDR = 8.259924
 -------------------- epoch 5 -------------------------
-step = 3000 , train SDR = 8.691136 , lr = 0.001000
-validation SDR = 9.094834
+step = 2700 , train SDR = 8.600896 , lr = 0.001000
+validation SDR = 8.732504
 -------------------- epoch 6 -------------------------
-step = 3600 , train SDR = 8.965910 , lr = 0.001000
-validation SDR = 9.437203
+step = 3240 , train SDR = 8.916705 , lr = 0.001000
+validation SDR = 9.076218
 From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\training\saver.py:966: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use standard file APIs to delete files with this prefix.
 -------------------- epoch 7 -------------------------
-step = 4200 , train SDR = 9.204189 , lr = 0.001000
-validation SDR = 9.570412
+step = 3780 , train SDR = 9.168825 , lr = 0.001000
+validation SDR = 9.321495
 -------------------- epoch 8 -------------------------
-step = 4800 , train SDR = 9.434926 , lr = 0.001000
-validation SDR = 9.618086
+step = 4320 , train SDR = 9.380606 , lr = 0.001000
+validation SDR = 9.427770
 -------------------- epoch 9 -------------------------
-step = 5400 , train SDR = 9.613786 , lr = 0.001000
-validation SDR = 9.824209
+step = 4860 , train SDR = 9.594275 , lr = 0.001000
+validation SDR = 9.716894
 -------------------- epoch 10 -------------------------
-step = 6000 , train SDR = 9.782170 , lr = 0.001000
-validation SDR = 9.926582
+step = 5400 , train SDR = 9.755563 , lr = 0.001000
+validation SDR = 9.800602
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Writing .\data\infer.tfr
+Loading data from .\data\infer.tfr
+# of trainable parameters: 172224
+Loading model from .\logs\model.ckpt-5400
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\training\saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from .\logs\model.ckpt-5400
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Loading data from .\data\infer.tfr
+# of trainable parameters: 172224
+Loading model from .\logs\model.ckpt-5400
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\training\saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from .\logs\model.ckpt-5400
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+Loading data from .\data\infer.tfr
+# of trainable parameters: 172224
+Loading model from .\logs\model.ckpt-5400
+From C:\Users\joshijai2\anaconda3\envs\convtasnet\lib\site-packages\tensorflow\python\training\saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from .\logs\model.ckpt-5400
+step = 5400 , infer SDR = 9.910704
