@@ -63,9 +63,9 @@ class TasNet:
             encoded_input = self.layers["conv1d_encoder"](
                 inputs=tf.expand_dims(input_audio, -1))
             # mod by jxp@20190612, replace 8000 with self.sample_rate
-            # self.encoded_len = (int(4 * 8000) - self.L) // (
+            # self.encoded_len = (int(10 * 8000) - self.L) // (
             #     self.L // 2) + 1
-            self.encoded_len = (int(4 * self.sample_rate) - self.L) // (
+            self.encoded_len = (int(10 * self.sample_rate) - self.L) // (
                 self.L // 2) + 1
 
         with tf.variable_scope("bottleneck"):
