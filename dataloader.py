@@ -86,16 +86,12 @@ class TasNetDataLoader():
 
                 now_length = mix.shape[-1]
 
-                # if now_length < int(4 * self.sample_rate):
-                #     continue
-                # target_length = int(4 * self.sample_rate)
-                # stride = int(4 * self.sample_rate)
-
-                if now_length < int(4 * self.sample_rate):
+                if now_length < int(10 * self.sample_rate):
                     continue
-                target_length = int(4 * self.sample_rate)
-                stride = int(4 * self.sample_rate)
-                for i in range(0, now_length - target_length, stride):
+                target_length = int(10 * self.sample_rate)
+                stride = int(10 * self.sample_rate)
+                
+                for i in range(0, now_length - target_length + 1, stride):
                     write(i, i + target_length)
                 # if now_length // target_length:
                 #     write(now_length - target_length, now_length)
