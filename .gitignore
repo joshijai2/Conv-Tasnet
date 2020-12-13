@@ -1,3 +1,11 @@
 # dir
-data/
+data/train/mix
+data/train/s1
+data/train/s2
+data/valid/mix
+data/valid/s1
+data/valid/s2
+data/infer/mix
+data/infer/s1
+data/infer/s2
 logs/test/
