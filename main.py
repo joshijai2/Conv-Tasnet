@@ -62,23 +62,16 @@ if __name__ == '__main__':
                                                 args.batch_size, args.sample_rate)
             valid_dataloader = TasNetDataLoader("valid", args.data_dir,
                                                     args.batch_size, args.sample_rate)
-            # data_train = tf.placeholder(tf.float32, [args.batch_size, 3,
-            #                                          4*8000])
-            # data_valid = tf.placeholder(tf.float32, [args.batch_size, 3,
-            #                                          4*8000])
             data_train = train_dataloader.get_next()
             data_valid = valid_dataloader.get_next()
         else:
             infer_dataloader = TasNetDataLoader("infer", args.data_dir,
                                                 args.batch_size, args.sample_rate)
-            # data_infer = tf.placeholder(tf.float32, [args.batch_size, 3,
-            #                                          4*8000])
             data_infer = infer_dataloader.get_next()
 
     with tf.variable_scope("model", reuse=tf.AUTO_REUSE) as scope, tf.device("/cpu:0"):
         layers = {
             "conv1d_encoder":
-            # mod by jiaxp@20190625, replace activation relu with linear
             tf.keras.layers.Conv1D(
                 filters=args.N,
                 kernel_size=args.L,
@@ -134,7 +127,6 @@ if __name__ == '__main__':
                                          args.R, args.sample_rate)
                     tower_valid_loss.append(valid_model.loss)
                     
-
             gradients = average_gradients(tower_grads)
             model_loss = average_loss(tower_loss)
             valid_loss = average_loss(tower_valid_loss)
@@ -151,40 +143,11 @@ if __name__ == '__main__':
     valid_sdr = read_log(args.log_file)
 
     if args.mode == 'train':
-        # with tf.variable_scope("model", reuse=tf.AUTO_REUSE) as scope, tf.device("/cpu:0"):
-        #     learning_rate = tf.placeholder(tf.float32, [])
-        #     opt = tf.train.AdamOptimizer(learning_rate=learning_rate)
-        # gradients = tf.gradients(train_model.loss, trainable_variables)
-        # clip gradients
-        # cliped_gradients = tf.clip_by_norm(gradients, 5)
-        #     tower_grads = []
-        #     tower_loss = []
-        #     for gpu_i in range(gpu_num):
-        #         with tf.name_scope("tower_{}".format(GPUs[gpu_i])),
-        #         tf.device("/gpu:{}".format(GPUs[gpu_i])):
-        #             cur_loss = train_model.loss
-        #             tf.get_variable_scope().reuse_variables()
-        #             gradients = opt.compute_gradients(cur_loss)
-        #             tower_grads.append(gradients)
-        #             tower_loss.append(cur_loss)
-        # gradients = average_gradients(tower_grads)
-                
         cliped_gradients = []
         v = []
         for i, (grad_x, v_x) in enumerate(gradients):
             cliped_gradients.append(tf.clip_by_norm(grad_x, 5))
             v.append(v_x)
-        # cliped_gradients = tf.clip_by_norm(gradients, 5)
-        
-        # print variables
-        # print("variables num: ", len(v))
-        # for cur_v in v:
-        #     print(cur_v)
-        # print('*'*20)
-        # trainable_variables = tf.trainable_variables()
-        # print("variables num: ", len(trainable_variables))
-        # for cur_v in trainable_variables:
-        #     print(cur_v)
         with tf.variable_scope("model", reuse=tf.AUTO_REUSE):
             update = opt.apply_gradients(
                 zip(cliped_gradients, v), global_step=global_step)
@@ -194,8 +157,6 @@ if __name__ == '__main__':
     config = tf.ConfigProto()
     config.allow_soft_placement = True
     with tf.Session(config=config) as sess:
-    # with tf.Session() as sess:
-
         ckpt = tf.train.get_checkpoint_state(args.log_dir)
         if ckpt:
             logging.info('Loading model from %s', ckpt.model_checkpoint_path)
@@ -218,7 +179,6 @@ if __name__ == '__main__':
                     try:
                         if TRAIN_SET_LEN > 0 and train_iter_cnt > TRAIN_SET_LEN:
                             raise(TypeError('123'))
-                        # cur_sig = sess.run(train_dataloader.get_next())
                         cur_loss, _, cur_global_step =\
                             sess.run(
                                 fetches=[model_loss, update, global_step],
@@ -249,7 +209,7 @@ if __name__ == '__main__':
                         valid_scores.append(cur_sdr)
                         if max(valid_scores[-3:]) < valid_sdr:
                             lr /= 2
-                            # mod by jxp, run at least 3 epochs after lr is halved
+                           
                             valid_scores.append(valid_sdr)
 
                         logging.info('validation SDR = {:5f}'.format(cur_sdr))
