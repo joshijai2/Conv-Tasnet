@@ -66,14 +66,6 @@ class TasNetDataLoader():
                 s2, _ = librosa.load(
                     os.path.join(s2_wav_dir, s2filenames[index]), self.sample_rate)
 
-                # def padding(inputs):
-                #     return np.pad(
-                #         inputs, (int(2.55 * self.sample_rate), 0),
-                #         'constant',
-                #         constant_values=(0, 0))
-
-                # mix, s1, s2 = padding(mix), padding(s1), padding(s2)
-
                 def write(l, r):
                     example = tf.train.Example(
                         features=tf.train.Features(

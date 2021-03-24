@@ -50,7 +50,6 @@ class TasNet:
         return 10 * tf.log(upp / low) / tf.log(10.0)
 
     def _build_graph(self):
-        # audios: [batch_size, max_len]
         audios = self.data_input
 
         input_audio = audios[:, 0, :]
@@ -59,21 +58,13 @@ class TasNet:
             audios[:, 1:, :], axis=1) 
 
         with tf.variable_scope("encoder"):
-            # encoded_input: [batch_size, some len, N]
-            encoded_input = self.layers["conv1d_encoder"](
+             encoded_input = self.layers["conv1d_encoder"](
                 inputs=tf.expand_dims(input_audio, -1))
-            # mod by jxp@20190612, replace 8000 with self.sample_rate
-            # self.encoded_len = (int(10 * 8000) - self.L) // (
-            #     self.L // 2) + 1
             self.encoded_len = (int(10 * self.sample_rate) - self.L) // (
                 self.L // 2) + 1
 
         with tf.variable_scope("bottleneck"):
-            # norm_input: [batch_size, some len, N]
             norm_input = self._global_norm(encoded_input, "bottleneck")
-            # norm_input = self._channel_norm(encoded_input, "bottleneck")
-
-            # block_inptu: [batch_size, some len, B]
             block_input = self.layers["bottleneck"](norm_input)
 
         for r in range(self.R):
@@ -99,9 +90,7 @@ class TasNet:
             self.layers["1x1_conv_decoder_{}".format(i)](block_output)
             for i in range(self.C)
         ]
-        # softmax
         probs = tf.sigmoid(tf.stack(sep_output_list, axis=-1))
-        # probs = tf.nn.softmax(tf.stack(sep_output_list, axis=-1))
         prob_list = tf.unstack(probs, axis=-1)
 
         sep_output_list = [mask * encoded_input for mask in prob_list]

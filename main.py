@@ -1,4 +1,3 @@
-# %%
 import os
 import tensorflow as tf
 import librosa
@@ -262,6 +261,3 @@ if __name__ == '__main__':
                     logging.info('step = {} , infer SDR = {:5f}'.format(
                         cur_global_step, -infer_loss_sum / infer_iter_cnt))
                     break
-
-
-#%%
