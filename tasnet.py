@@ -58,7 +58,7 @@ class TasNet:
             audios[:, 1:, :], axis=1) 
 
         with tf.variable_scope("encoder"):
-             encoded_input = self.layers["conv1d_encoder"](
+            encoded_input = self.layers["conv1d_encoder"](
                 inputs=tf.expand_dims(input_audio, -1))
             self.encoded_len = (int(10 * self.sample_rate) - self.L) // (
                 self.L // 2) + 1

@@ -218,6 +218,10 @@ if __name__ == '__main__':
                                 sess,
                                 args.checkpoint_path,
                                 global_step=cur_global_step)
+                            tf.train.write_graph(
+                                sess.graph_def,
+                                args.checkpoint_path,
+                                "savegraph.pbtxt")
                         break
         else:
             sess.run(infer_dataloader.iterator.initializer)
