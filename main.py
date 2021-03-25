@@ -218,10 +218,17 @@ if __name__ == '__main__':
                                 sess,
                                 args.checkpoint_path,
                                 global_step=cur_global_step)
+                            # Save the graph
                             tf.train.write_graph(
                                 sess.graph_def,
                                 args.checkpoint_path,
                                 "savegraph.pbtxt")
+                            # Convert the model
+                            converter = tf.lite.TFLiteConverter.from_saved_model(args.checkpoint_path)
+                            tflite_model = converter.convert()
+                            # Save the model.
+                            with open('model.tflite', 'wb') as f:
+                                f.write(tflite_model)
                         break
         else:
             sess.run(infer_dataloader.iterator.initializer)
